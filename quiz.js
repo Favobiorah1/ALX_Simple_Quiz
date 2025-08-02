@@ -1,28 +1,25 @@
-// Function to check the user's answer
 function checkAnswer() {
-    // Define the correct answer
-    const correctAnswer = "4";
-    
-    // Get the user's selected answer
-    const selectedRadio = document.querySelector('input[name="quiz"]:checked');
-    
-    // Check if an answer was selected
-    if (!selectedRadio) {
-        document.getElementById('feedback').textContent = "Please select an answer!";
-        return;
-    }
-    
-    const userAnswer = selectedRadio.value;
-    
-    // Compare the user's answer with the correct answer
-    if (userAnswer === correctAnswer) {
-        document.getElementById('feedback').textContent = "correct! well done.";
-    } else {
-        document.getElementById('feedback').textContent = "That's incorrect. Try again!";
-    }
+  // correct answer
+  const correctAnswer = "4";
+
+  // select the checked radio button
+  const selectedOption = document.querySelector('input[name="quiz"]:checked');
+
+  // guard clause if no option is selected
+  if (!selectedOption) {
+    document.getElementById("feedback").textContent = "Please select an answer.";
+    return;
+  }
+
+  const userAnswer = selectedOption.value;
+
+  // check if the answer is correct
+  if (userAnswer === correctAnswer) {
+    document.getElementById("feedback").textContent = "That is correct, well done! Try again!";
+  } else {
+    document.getElementById("feedback").textContent = "That is incorrect, please try again.";
+  }
 }
 
-// Add event listener to the submit button
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('submit-answer').addEventListener('click', checkAnswer);
-});
+// add the event listener to the submit button
+document.getElementById("submit-answer").addEventListener("click", checkAnswer);
