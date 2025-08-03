@@ -12,7 +12,7 @@ function checkAnswer() {
 
   if (userAnswer === correctAnswer) {
     // This line must exactly match the required text
-    feedback.textContent = "correct! Well done.";
+    feedback.textContent = "Correct! Well done."; // Changed "correct" to "Correct"
   } else {
     feedback.textContent = "That is incorrect. Please try again.";
   }
