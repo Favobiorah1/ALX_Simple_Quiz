@@ -11,10 +11,11 @@ function checkAnswer() {
   const userAnswer = selectedOption.value;
 
   if (userAnswer === correctAnswer) {
-    // This line must exactly match the required text
-    feedback.textContent = "Correct! Well done."; // Changed "correct" to "Correct"
+    // Exact match for correct answer feedback
+    feedback.textContent = "Correct! Well done.";
   } else {
-    feedback.textContent = "That is incorrect. Please try again.";
+    // Exact match for incorrect answer feedback
+    feedback.textContent = "That's incorrect. Try again!";
   }
 }
 
